@@ -1,11 +1,15 @@
 FROM cpublic/client-go:latest
 
+# RUN \
+# 	apk add --update git python make g++ libnotify nodejs-npm && \
+# 	npm install -g gulp-cli
 RUN \
-	apk add --update git python make g++ libnotify nodejs-npm && \
-	npm install -g gulp-cli
+ 	apk add --update git python make g++ libnotify nodejs-npm nan && \
+ 	npm install -g gulp-cli
 
 ADD . /etherwallet
 WORKDIR etherwallet
+
 RUN npm install
 
 RUN \
