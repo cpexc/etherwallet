@@ -1,4 +1,4 @@
-FROM cpexc/client-go:latest
+FROM cpublic/client-go:latest
 
 RUN \
 	apk add --update git python make g++ libnotify nodejs-npm && \
